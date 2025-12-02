@@ -35,6 +35,7 @@ export default defineConfig({
   server: {
     port: 5001,
     host: "0.0.0.0",
+    allowedHosts: "all",
     cors: {
       origin: "*",
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
@@ -51,6 +52,7 @@ export default defineConfig({
   preview: {
     port: 5001,
     host: "0.0.0.0",
+    allowedHosts: "all",
     cors: {
       origin: "*",
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
