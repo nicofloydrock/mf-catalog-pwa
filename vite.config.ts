@@ -35,7 +35,7 @@ export default defineConfig({
   server: {
     port: 5001,
     host: "0.0.0.0",
-    allowedHosts: "all",
+    allowedHosts: true,
     cors: {
       origin: "*",
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
