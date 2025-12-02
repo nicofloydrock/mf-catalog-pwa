@@ -52,7 +52,7 @@ export default defineConfig({
   preview: {
     port: 5001,
     host: "0.0.0.0",
-    allowedHosts: "all",
+    allowedHosts: ["mf-catalog-pwa-production.up.railway.app", ".railway.app"],
     cors: {
       origin: "*",
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
