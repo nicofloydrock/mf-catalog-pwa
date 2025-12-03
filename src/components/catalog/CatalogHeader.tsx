@@ -14,14 +14,8 @@ export function CatalogHeader({ config }: Props) {
           Microfront Catálogo
         </p>
         <h1 className="text-2xl font-semibold text-white">
-          Gestión de catálogo en vivo
+         Operador:   ({userName})
         </h1>
-        <p className="text-sm text-slate-300">
-          React 18 + Vite + Module Federation listo para el App Shell.
-        </p>
-        <p className="text-xs text-slate-400">
-          Config recibido ({userName})
-        </p>
       </div>
       <div className="flex items-center gap-2 text-xs">
         <span className="rounded-full bg-white/10 px-3 py-1 text-slate-200">
