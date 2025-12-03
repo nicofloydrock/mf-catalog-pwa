@@ -14,11 +14,17 @@ type AppProps = {
 
 export default function App({ config }: AppProps) {
   const queryClient = useMemo(() => new QueryClient(), []);
+  const configLabel = config
+    ? `Config recibido (${config.user?.name ?? "sin usuario"})`
+    : "Config no recibido";
 
   return (
     <QueryClientProvider client={queryClient}>
       <div className="min-h-screen px-4 py-6 sm:px-8">
         <CatalogHeader />
+        <p className="mx-auto mt-2 max-w-5xl text-xs text-slate-300 sm:mt-3">
+          {configLabel}
+        </p>
 
         <main className="mx-auto mt-6 max-w-6xl">
           <section className="glass rounded-2xl border border-white/10 p-4 sm:p-5">
