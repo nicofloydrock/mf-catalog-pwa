@@ -1,26 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import federation from "@originjs/vite-plugin-federation";
+import { moduleFederationConfig } from "./module.federation.config";
 
 export default defineConfig({
   plugins: [
     react(),
-    federation({
-      name: "catalog",
-      filename: "mfEntry.js",
-      exposes: {
-        "./App": "./src/App.tsx",
-      },
-      shared: {
-        react: { singleton: true, eager: true, requiredVersion: "^18.2.0" },
-        "react-dom": {
-          singleton: true,
-          eager: true,
-          requiredVersion: "^18.2.0",
-        },
-      },
-    }),
+    moduleFederationConfig(),
     {
+      // Alias para /dist/assets/* en dev, se mantiene el comportamiento previo.
       name: "dist-alias",
       configureServer(server) {
         server.middlewares.use((req, _res, next) => {
@@ -46,13 +33,12 @@ export default defineConfig({
       "Access-Control-Allow-Headers": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
     },
-    // Permite resolver requests con prefijo /dist/assets/* cuando el host las pida.
     middlewareMode: false,
   },
   preview: {
     port: 5001,
     host: "0.0.0.0",
-    allowedHosts: ["mf-catalog-pwa-production.up.railway.app", ".railway.app"],
+    allowedHosts: "all",
     cors: {
       origin: "*",
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
