@@ -81,7 +81,7 @@ export function MetricsPanel({ refreshMs = 6000 }: Props) {
 
   if (isLoading) {
     return <Skeleton className="h-36 w-full rounded-2xl" />;
-  }
+  }  
 
   if (error) {
     return <ErrorBox message={(error as Error).message} />;
@@ -94,7 +94,7 @@ export function MetricsPanel({ refreshMs = 6000 }: Props) {
       <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
         <div>
           <p className="text-xs uppercase tracking-[0.25em] text-slate-400">
-            Panel en vivo (API mock)
+            Panel en vivoo (API mock)
           </p>
           <h2 className="text-xl font-semibold text-white">
             Pulso de catálogo y demanda

@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { notifyOnRebuild } from "@antdevx/vite-plugin-hmr-sync";
 import { moduleFederationConfig } from "./module.federation.config";
 
 export default defineConfig({
@@ -18,6 +19,13 @@ export default defineConfig({
         });
       },
     },
+    // Notifica al host cuando este remoto se recompila para forzar reload en el shell.
+    notifyOnRebuild({
+      appName: "catalog",
+      hostUrl: "http://localhost:5173",
+      endpoint: "/on-child-rebuild",
+      notifyOnSuccessOnly: true,
+    }),
   ],
   server: {
     port: 5001,
