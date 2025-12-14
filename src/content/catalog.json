@@ -1,0 +1,32 @@
+{
+  "app": {
+    "invalidConfig": "Config no recibida o token inválido.",
+    "anonymousUser": "sin usuario"
+  },
+  "header": {
+    "microfrontLabel": "Microfront Catálogo",
+    "operatorLabel": "Operador",
+    "remoteLabel": "remote",
+    "moduleLabel": "expose",
+    "notifyCta": "Alertar host",
+    "notifyTitle": "Aviso desde Catálogo",
+    "notifyBody": "Alerta enviada desde catálogo al host."
+  },
+  "tester": {
+    "title": "Config de prueba",
+    "description": "Pega un objeto JSON con token/usuario para probar catálogo en modo standalone.",
+    "placeholder": "{\n  \"token\": \"NICORIVERA\",\n  \"user\": { \"id\": \"operator-1\", \"name\": \"Operador Demo\" }\n}",
+    "applyCta": "Usar config",
+    "demoCta": "Cargar demo",
+    "errorInvalid": "JSON inválido, revisa el formato."
+  },
+  "metrics": {
+    "subtitle": "Panel en vivo (API mock)",
+    "title": "Pulso de catálogo y demanda",
+    "descriptionPrefix": "Datos se actualizan cada",
+    "seriesMissing": "No hay series para mostrar",
+    "sparkline": {
+      "lastLabel": "Último"
+    }
+  }
+}

@@ -1,3 +1,4 @@
+// Caja simple de error para mostrar mensajes de API o fallback.
 type Props = {
   message: string;
 };

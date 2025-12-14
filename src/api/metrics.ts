@@ -1,3 +1,4 @@
+// Cliente API para obtener métricas mock desde el host configurado.
 import type { MetricsPayload } from "../types/metrics";
 import { resolveApiBase } from "../utils/env";
 

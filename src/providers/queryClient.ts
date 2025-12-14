@@ -1,3 +1,4 @@
+// Cliente React Query compartido para el MF Catálogo.
 import { QueryClient } from "@tanstack/react-query";
 
 export const queryClient = new QueryClient({

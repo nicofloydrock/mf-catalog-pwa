@@ -1,3 +1,4 @@
+// Placeholder de carga con animación pulse.
 type Props = {
   className?: string;
 };

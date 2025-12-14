@@ -1,3 +1,4 @@
+// Bootstrap del MF Catálogo: monta React con QueryClient global y estilos base.
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { QueryClientProvider } from "@tanstack/react-query";
